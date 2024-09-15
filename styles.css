@@ -11,8 +11,9 @@
 
 @font-face {
     font-family: "Black Mango";
-    src: url(/fonts/BlackMango-Regular.ttf);
+    src: url('fonts/BlackMango-Regular.ttf');
 }
+
 /* LAYOUT */
 html {
     background-color: var(--powder);
