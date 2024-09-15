@@ -28,7 +28,7 @@ html {
 }
 
 h1 {
-    font-family: "Black Mango", sans-serif;
+    font-family: "Black Mango", serif;
     font-size: 5rem;
 }
 
@@ -131,7 +131,7 @@ h1 {
 }
 
 .project-tile-title {
-    font-family: "Black Mango", sans-serif;
+    font-family: "Black Mango", serif;
     margin-top: calc(calc(calc(var(--project-tile-size)/2) * -1) - 1rem);
     color: var(--powder);
     text-decoration: none;
