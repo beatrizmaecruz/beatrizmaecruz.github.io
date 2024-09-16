@@ -32,6 +32,10 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    width: 100vw;
+}
+
 h1 {
     font-family: "Black Mango", serif;
     font-size: 5rem;
@@ -87,29 +91,28 @@ h1 {
 }
 
 
-
-/* welcome-section */
-#welcome-section {
+/* HOMEPAGE */
+#home-landing {
     box-sizing: border-box;
     height: 100vh;
-    padding: calc(var(--navbar-height) + 20vh) 25vw;
+    padding: calc(var(--navbar-height) + 25vh) 25vw;
 }
 
-#welcome-section h1 {
+#home-landing h1 {
     text-align: left;
     line-height: 5rem;
 }
 
-#welcome-section p {
+#home-landing p {
     font-size: 1.75rem;
 }
 
 /* projects */
-#projects {
+#home-projects {
     text-align: center;
 }
 
-#projects p {
+#home-projects p {
     font-size: 1.5rem;
 }
 
@@ -146,8 +149,10 @@ h1 {
 /* MOBILE MEDIA QUERY */
 
 @media only screen and (max-width: 600px) {
+    :root {
+        --navbar-height: 100px;
+    }
     #navbar {
-        height: 150px;
         padding: 60px;
         display: flex;
         flex-direction: column;
@@ -156,11 +161,11 @@ h1 {
         row-gap: 35px;
     }
     #welcome-section {
+        height: 100vh;
+        padding: calc(var(--navbar-height) + 20vh) 25vw;
         h1, p {
             text-align: center;
         }
-        height: 100vh;
-        margin-bottom: 100px;
     }
     .projects-grid {
         flex-direction: column;
