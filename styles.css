@@ -172,7 +172,7 @@ h1 {
     }
     #welcome-section {
         height: 100vh;
-        padding: calc(var(--navbar-height) + 20vh) 25vw;
+        padding: calc(var(--navbar-height) + 20vh) 0;
         h1, p {
             text-align: center;
         }
