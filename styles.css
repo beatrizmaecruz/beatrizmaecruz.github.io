@@ -114,12 +114,16 @@ h1 {
 /* projects */
 #home-projects {
     text-align: center;
+    min-height: 100vh;
+    padding-top: 25vh;
 }
 
 #home-projects p {
     font-size: 1.5rem;
 }
 
+
+/* home-projects  */
 .projects-grid {
     margin: 50px 0;
     display: flex;
@@ -132,22 +136,24 @@ h1 {
 }
 
 .project-tile {
-    height: var(--project-tile-size);
-    width: var(--project-tile-size);
     text-decoration: none;
 }
 
 .project-tile-img {
-    width: 100%;
-    height: 100%;
+    width: var(--project-tile-size);
+    height: var(--project-tile-size);
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .project-tile-title {
     font-family: "Black Mango", serif;
-    margin-top: calc(calc(calc(var(--project-tile-size)/2) * -1) - 1rem);
-    color: var(--powder);
+    color: var(--black);
     text-decoration: none;
-    font-size: 50px;
+    font-size: 1rem;
 }
 
 /* MOBILE MEDIA QUERY */
