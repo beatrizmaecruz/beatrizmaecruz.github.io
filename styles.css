@@ -1,10 +1,9 @@
 /* ASSETS */
 :root {
-    --powder: #E9E3E2;
+    --powder: #e9e3e2;
+    --near-white: #f1edec;
     --black: #111111;
-    
 
-    --navbar-height: 140px;
     --footer-height: 250px;
     --project-tile-size: 400px;
 }
@@ -19,7 +18,8 @@
     src: url('fonts/HelveticaNeue.ttc');
 }
 
-/* LAYOUT */
+/* UNIVERSAL STYLING */
+
 html {
     background-color: var(--powder);
 }
@@ -32,12 +32,8 @@ html {
     box-sizing: border-box;
 }
 
-* a {
-    text-decoration: none;
-}
-
-body {
-    width: 100vw;
+* ul {
+    list-style: none;
 }
 
 h1 {
@@ -45,35 +41,56 @@ h1 {
     font-size: 5rem;
 }
 
+
+
 /* NAVIGATION */
-#navbar {
-    position: fixed;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: var(--navbar-height);
-    padding: 75px 100px;
-    backdrop-filter: blur(10px);
+#nav-bar {
+    width: min(90vw, 600px);
+    height: min(3em, 10vh);
 
+    position: sticky;
+    margin: 0 auto;
+    top: 2em;
+
+    background: rgba(233, 227, 226, 0.8);;
+    backdrop-filter: blur(8px);
+
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+    border: 1.6px solid var(--black);
+}
+
+#navigation {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-#navbar h1 {
-    font-size: 35px;
-    line-height: 0;
+#nav-bar ul li {
+    text-align: center;
+    flex: 1 1 auto;
 }
 
-#navbar ul {
-    list-style: none;
+#nav-bar ul li a {
+    text-decoration: none;
+}
+
+/* Active Page */
+#nav-bar ul li.active {
+    background: var(--black);
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 50px;
-    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
 }
+
+#nav-bar ul li.active a {
+    color: var(--powder);
+}
+
+
+
 
 /* FOOTER */
 #footer {
@@ -86,10 +103,6 @@ h1 {
     justify-content: space-around;
 }
 
-#footer ul {
-    list-style: none;
-}
-
 #footer-contacts {
     text-align: right;
 }
@@ -97,9 +110,8 @@ h1 {
 
 /* HOMEPAGE */
 #home-landing {
-    box-sizing: border-box;
     height: 100vh;
-    padding: calc(var(--navbar-height) + 25vh) 25vw;
+    width: 100vw;
 }
 
 #home-landing h1 {
@@ -124,16 +136,6 @@ h1 {
 
 
 /* home-projects  */
-.projects-grid {
-    margin: 50px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    column-gap: calc(var(--project-tile-size)/4);
-    row-gap: calc(var(--project-tile-size)/4);
-    flex-wrap: wrap;
-}
 
 .project-tile {
     text-decoration: none;
@@ -159,24 +161,8 @@ h1 {
 /* MOBILE MEDIA QUERY */
 
 @media only screen and (max-width: 600px) {
-    :root {
-        --navbar-height: 100px;
-    }
-    #navbar {
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        row-gap: 35px;
-    }
-    #welcome-section {
-        height: 100vh;
-        padding: calc(var(--navbar-height) + 20vh) 0;
-        h1, p {
-            text-align: center;
-        }
-    }
+
+
     .projects-grid {
         flex-direction: column;
         row-gap: 50px;
