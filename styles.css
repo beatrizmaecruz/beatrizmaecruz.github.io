@@ -45,7 +45,7 @@ h1 {
 /* <-------------------- NAVIGATION --------------------> */
 #nav-bar {
     width: min(87dvw, 600px);
-    height: 2.4rem;
+    height: 2.2rem;
 
     font-size: 1rem;
 
@@ -53,9 +53,10 @@ h1 {
     margin: 0 auto;
     top: 3dvh;
 
-    background: rgba(233, 227, 226, 0.8);;
+    background: rgba(233, 227, 226, 0.7);;
     backdrop-filter: blur(8px);
-    border: 1.6px solid var(--black);
+    border: 1.2px solid var(--black);
+    border-radius: 1.2rem;
 
     z-index: 99;
 }
@@ -75,6 +76,7 @@ h1 {
 
 #navigation li {
     flex: 1 1 auto;
+    border-radius: 1.2rem;
 }
 
 #navigation a {
@@ -123,61 +125,19 @@ h1 {
 }
 
 
-/* HOMEPAGE */
-#home-landing {
-    height: 10dvh;
+/* <-------------------- HOMEPAGE --------------------> */
+.landing {
     width: 100dvw;
-}
-
-#home-landing h1 {
-    text-align: left;
-    line-height: 5rem;
-}
-
-#home-landing p {
-    font-size: 1.75rem;
-}
-
-/* projects */
-#home-projects {
-    text-align: center;
-    min-height: 100vh;
-    padding-top: 25vh;
-}
-
-#home-projects p {
-    font-size: 1.5rem;
+    height: 90dvh;
 }
 
 
-/* home-projects  */
-
-.project-tile {
-    text-decoration: none;
-}
-
-.project-tile-img {
-    width: var(--project-tile-size);
-    height: var(--project-tile-size);
-}
-
-.project-tile:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-
-.project-tile-title {
-    font-family: "Black Mango", serif;
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* MOBILE MEDIA QUERY */
+/* <-------------------- MOBILE ADJUSTMENTS --------------------> */
 
 @media only screen and (max-width: 768px) {
     #nav-bar {
         top: 90dvh;
+        font-size: 0.9rem;
     }
     .projects-grid {
         flex-direction: column;
