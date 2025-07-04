@@ -3,9 +3,6 @@
     --powder: #e9e3e2;
     --near-white: #f1edec;
     --black: #111111;
-
-    --footer-height: 250px;
-    --project-tile-size: 400px;
 }
 
 @font-face {
@@ -36,11 +33,32 @@ h1 {
     font-family: "Black Mango", serif;
 }
 
-.test {
-    width: 100dvw;
+.page-content {
+    padding: calc(2.2rem + 3dvh) 17dvw 0;
+/* TEMPORARY PLACERS */
     height: 100dvh;
+    h1, p {
+        text-align: center;
+    }
 }
 
+.grid {
+    display: grid;
+    border: 2px solid green;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+/* SPANS STYLING */
+span.italic {
+    font-style: italic;
+}
+
+span.extra-bold {
+    font-weight: bolder;
+}
 
 /* <-------------------- NAVIGATION --------------------> */
 #nav-bar {
@@ -111,13 +129,20 @@ h1 {
 
 /* <-------------------- FOOTER --------------------> */
 #footer {
-    box-sizing: border-box;
-    height: var(--footer-height);
-    backdrop-filter: blur(10px);
-    padding-top: 70px;
+    padding: 10dvh 0;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+
+#footer li {
+    list-style: none;
+}
+
+#footer a {
+    text-decoration: none;
 }
 
 #footer-contacts {
@@ -126,31 +151,49 @@ h1 {
 
 
 /* <-------------------- HOMEPAGE --------------------> */
-.landing {
-    width: 100dvw;
-    height: 90dvh;
+#home-greeting-grid {
+    /* grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 70px); */
+    gap: 1.1em;
 }
 
+#home-greeting-grid div {
+    border: 1px dashed yellow;
+}
 
+#item-1 {
+    /* grid-column: 1 / 6; */
+    min-height: 60dvh;
+
+}
+
+#item-2 {
+
+}
+
+#item-3 {
+
+}
 /* <-------------------- MOBILE ADJUSTMENTS --------------------> */
 
 @media only screen and (max-width: 768px) {
+    .page-content {
+        padding: 2rem 1.8rem 0;
+    }
     #nav-bar {
         top: 90dvh;
         font-size: 0.9rem;
     }
-    .projects-grid {
-        flex-direction: column;
-        row-gap: 50px;
-    }
     #footer {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 10px;
-        justify-content: start;
-        height: 400px;
+        height: 30rem;
+
         text-align: center;
+
+        flex-direction: column;
+        place-content: center;
+        row-gap: 10px;
     }
+
     #footer-contacts {
         text-align: center;
     }
