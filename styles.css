@@ -1,7 +1,9 @@
 /* ASSETS */
 :root {
     --powder: #e9e3e2;
-    --near-white: #f1edec;
+    --near-white: #e1d6d3;
+    --powder-transparent: rgba(233, 227, 226, 0.7);
+
     --black: #111111;
 }
 
@@ -29,14 +31,14 @@ html {
     box-sizing: border-box;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: "Black Mango", serif;
 }
 
 .page-content {
     padding: calc(2.2rem + 3dvh) 17dvw 0;
 /* TEMPORARY PLACERS */
-    height: 100dvh;
+    min-height: 90dvh;
     h1, p {
         text-align: center;
     }
@@ -44,7 +46,6 @@ h1 {
 
 .grid {
     display: grid;
-    border: 2px solid green;
 }
 
 .grid-item {
@@ -71,7 +72,7 @@ span.extra-bold {
     margin: 0 auto;
     top: 3dvh;
 
-    background: rgba(233, 227, 226, 0.7);;
+    background: var(--powder-transparent);
     backdrop-filter: blur(8px);
     border: 1.2px solid var(--black);
     border-radius: 1.2rem;
@@ -152,23 +153,102 @@ span.extra-bold {
 
 /* <-------------------- HOMEPAGE --------------------> */
 #home-greeting-grid {
-    /* grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 70px); */
-    gap: 1.1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+
+    grid-template-areas: 
+        "intro intro intro"
+        "about learnt learnt";
 }
 
-#home-greeting-grid div {
-    border: 1px dashed yellow;
+#home-greeting-grid * {
+    text-align: left;
 }
 
-#item-1 {
-    /* grid-column: 1 / 6; */
-    min-height: 60dvh;
-
+#home-greeting-grid .grid-item {
+    background: var(--near-white);
+    border-radius: 1.2rem;
 }
+
+/* Self-note: grid-area property also covers for mobile grid placement too. */
+#greet-1 {
+    grid-area: intro;
+    padding: 4.5rem;
+}
+
+#greet-1 h1 {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+}
+
+#greet-1 p {
+    font-size: 2rem;
+}
+
+#greet-2 {
+    grid-area: about;
+    padding: 25% 4.5rem;
+
+    font-size: 1.2rem;
+}
+
+#greet-2 a {
+    display: block;
+    margin-top: 1.7rem;
+    padding: 0.5rem 1rem;
+
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+
+    background: var(--powder-transparent);
+    backdrop-filter: blur(8px);
+    border: 1.2px solid var(--black);
+    border-radius: 1.2rem;
+
+
+    transition-duration: 600ms;
+}
+
+#greet-2 a:hover {
+    color: var(--powder);
+    background: var(--black);
+}
+
+#greet-3 {
+    grid-area: learnt;
+    padding: 4.5rem;
+    font-size: 1.2rem;
+}
+
+#greet-3 #learnt-languages {
+    overflow-x: scroll;
+    scrollbar-color: rgba(0, 0, 0, 0.5) var(--near-white);
+    scrollbar-width: thin;
+
+    padding: 20px 0;
+    /* background: white; */
+
+    display: flex;
+    gap: 20px;
+}
+
+#greet-3 #learnt-languages img {
+    height: max(120px);
+}
+
+/* <-------------------- TABLET ADJUSTMENTS --------------------> */
+@media only screen and (max-width: 1023px) {
+    .page-content {
+        padding: 2rem 5rem 0;
+    }
+}
+
 /* <-------------------- MOBILE ADJUSTMENTS --------------------> */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .page-content {
         padding: 2rem 1.8rem 0;
     }
@@ -189,4 +269,17 @@ span.extra-bold {
     #footer-contacts {
         text-align: center;
     }
+    #home-greeting-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas: 
+            "intro"
+            "about"
+            "learnt"
+    }
+    #home-greeting-grid .grid-item {
+        padding: 2rem;
+    }
 }
+
