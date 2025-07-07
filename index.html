@@ -23,18 +23,18 @@
 
   <main class="page-content">
 
-    <section id="greeting-&-about">
+    <section id="home-greeting-and-about">
       <div id="home-greeting-grid" class="grid">
 
           <div class="grid-item" id="greet-1">
             <h1>Hello there!<br/> I'm Beatriz.</h1>
-            <p>I’m a 22-year old student who is intrigued by <span class="italic">too</span> many things. <span class="extra-bold">
+            <p>I’m a 22-year old student who is intrigued by <span class="italic">too</span> many things.<span class="extra-bold"><br/>
               Coding</span> is one of those things.</p>
           </div>
 
           <div class="grid-item" id="greet-2">
-            <h3></h3>
-            <p>I'm all about learning anything and everything! As long as there's a <span class="italic">why</span> or <span class="italic">how</span>, I want to understand it.</p>
+            <p>I'm all about learning anything and everything!<br/>
+            As long as there's a <span class="italic">why</span> or <span class="italic">how</span>, I want to understand it.</p>
             <a href="pages/about.html">More About Me</a>
           </div>
 
@@ -49,6 +49,67 @@
           </div>
 
       </div>
+    </section>
+
+    <section id="home-projects-preview">
+      <h2>Here's a few things I've cooked up...</h2>
+
+      <div id="home-projects-grid" class="grid">
+
+        <div class="grid-item" id="home-project-2">MedScanner</div>
+
+        <div class="grid-item" id="home-project-1">Python Cat Game</div>
+
+      </div>
+    </section>
+
+    <section id="home-contact-me">
+      <h2>Psst, wanna get in touch?</h2>
+      <!-- <p>Hint: This sends off to beatrizmaecruz@proton.me.</p> -->
+
+
+      <!-- Thank you to https://web3forms.com for allowing this form to exist and fully function! :D -->
+      <form class="email-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="3d4057e3-a3b6-4e58-bf0c-fc5640090b7c"/>
+        
+
+          <!-- HIDDEN DATA -->
+          <!-- Optional: From Name you want to see in the email -->
+          <input type="hidden" name="from_name" value="Software Portfolio Message"/>
+          <!-- Optional: But Recommended: To Prevent SPAM Submission. 
+              Make sure its hidden by default -->
+          <input type="hidden" name="botcheck" id="" style="display: none;"/>
+
+
+          <!-- VISIBLE FORM DATA -->
+           <div class="email-form-sender-email">
+            <label for="sender email">Email</label>
+            <input type="email" name="sender email" required/>
+           </div>
+          
+           
+          <div class="email-form-name">
+            <label for="sender name">Name</label>
+            <input type="text" name="sender name" required/>
+          </div>
+
+          <div class="email-form-subject">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" />
+          </div>
+
+          <div class="email-form-message">
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10" required></textarea>
+          </div>
+
+
+          <input type="hidden" name="redirect" value="https://beatrizmaecruz.github.io/pages/thank_you.html">
+          <button class="form-submit" type="submit">Submit Form</button>
+
+      </form>
+
     </section>
 
   </main>

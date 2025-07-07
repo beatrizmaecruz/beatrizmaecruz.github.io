@@ -1,8 +1,8 @@
 /* ASSETS */
 :root {
-    --powder: #e9e3e2;
-    --near-white: #e1d6d3;
-    --powder-transparent: rgba(233, 227, 226, 0.7);
+    --powder: #f5f3f2;
+    --near-white: rgba(255, 255, 255, 0.7);
+    --powder-transparent: rgba(244, 239, 239, 0.7);
 
     --black: #111111;
 }
@@ -35,13 +35,16 @@ h1, h2, h3 {
     font-family: "Black Mango", serif;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 .page-content {
     padding: calc(2.2rem + 3dvh) 17dvw 0;
-/* TEMPORARY PLACERS */
-    min-height: 90dvh;
-    h1, p {
-        text-align: center;
-    }
 }
 
 .grid {
@@ -50,6 +53,11 @@ h1, h2, h3 {
 
 .grid-item {
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(100px);
+
+    border-radius: 1.2rem;
+    padding: 3.7rem;
 }
 
 /* SPANS STYLING */
@@ -152,6 +160,15 @@ span.extra-bold {
 
 
 /* <-------------------- HOMEPAGE --------------------> */
+section {
+    margin-bottom: 10dvh;
+}
+
+section h2 {
+    margin: 0 0 2rem 3.7rem;
+}
+
+/* GREETING GRID */
 #home-greeting-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr;
@@ -166,15 +183,9 @@ span.extra-bold {
     text-align: left;
 }
 
-#home-greeting-grid .grid-item {
-    background: var(--near-white);
-    border-radius: 1.2rem;
-}
-
 /* Self-note: grid-area property also covers for mobile grid placement too. */
 #greet-1 {
     grid-area: intro;
-    padding: 4.5rem;
 }
 
 #greet-1 h1 {
@@ -189,7 +200,7 @@ span.extra-bold {
 
 #greet-2 {
     grid-area: about;
-    padding: 25% 4.5rem;
+    padding-top: 25%;
 
     font-size: 1.2rem;
 }
@@ -219,8 +230,12 @@ span.extra-bold {
 
 #greet-3 {
     grid-area: learnt;
-    padding: 4.5rem;
     font-size: 1.2rem;
+
+    /* Note: This is for vertical align, there might be a better way to do this) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #greet-3 #learnt-languages {
@@ -239,10 +254,97 @@ span.extra-bold {
     height: max(120px);
 }
 
+/* PROJECT PREVIEWS */
+
+#home-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+}
+
+/* HOME CONTACT FORM */
+.email-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "input-email input-name"
+        "input-subject input-subject"
+        "input-message input-message"
+        "submit submit";
+    row-gap: 1.5rem;
+
+    background: var(--near-white);
+    border-radius: 1.2rem;
+    padding: 3.7rem;
+}
+
+.email-form input, .email-form textarea {
+    width: 100%;
+    background: var(--powder-transparent);
+    border: 1px solid var(--black);
+    min-height: 2rem;
+    border-radius: 0.5rem;
+}
+
+.email-form-sender-email {
+    grid-area: input-email;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form-name {
+    grid-area: input-name;
+
+    padding-left: 1rem;
+}
+
+.email-form-subject {
+    grid-area: input-subject;
+}
+
+.email-form-message {
+    grid-area: input-message;
+}
+
+.form-submit {
+    grid-area: submit;
+
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    
+    background: var(--powder-transparent);
+    backdrop-filter: blur(8px);
+    border: 1.2px solid var(--black);
+    border-radius: 1.5rem;
+
+    transition-duration: 600ms;
+}
+
+.form-submit:hover {
+    color: var(--powder);
+    background: var(--black);
+}
+
+/* <-------------------- THANK YOU PAGE --------------------> */
+#thank-you-message {
+    text-align: center;
+}
+
+#thank-you-message p { 
+    margin: 1rem 0;
+}
+
+
+
 /* <-------------------- TABLET ADJUSTMENTS --------------------> */
 @media only screen and (max-width: 1023px) {
     .page-content {
         padding: 2rem 5rem 0;
+    }
+    #home-greeting-grid .grid-item {
+        padding: 2rem;
     }
 }
 
@@ -277,9 +379,6 @@ span.extra-bold {
             "intro"
             "about"
             "learnt"
-    }
-    #home-greeting-grid .grid-item {
-        padding: 2rem;
     }
 }
 
