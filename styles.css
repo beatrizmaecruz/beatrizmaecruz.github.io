@@ -44,7 +44,8 @@ h2 {
 }
 
 .page-content {
-    padding: calc(2.2rem + 3dvh) 17dvw 0;
+    padding: 7rem 17dvw 0;
+    min-height: 100dvh;
 }
 
 .grid {
@@ -257,7 +258,7 @@ section h2 {
 /* PROJECT PREVIEWS */
 
 #home-projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 1.5rem;
 }
@@ -271,16 +272,10 @@ section h2 {
 #home-projects-grid .grid-item img {
     display: block;
     max-inline-size: 100%;
-
-
 }
 
 #home-projects-grid .grid-item:hover {
     scale: 1.05;
-}
-
-#home-projects-medscanner {
-    grid-column: 1 / 3;
 }
 
 /* HOME CONTACT FORM */
@@ -357,6 +352,73 @@ section h2 {
     margin: 1rem 0;
 }
 
+
+/* <-------------------- PROEJCTS PAGE --------------------> */
+#projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.2rem;
+}
+
+#projects-grid h3.project-preview-title {
+    font-family: "Helvetica Neue";
+    margin-bottom: 0.5rem;
+}
+
+#projects-grid p.project-preview-desc {
+    /* Divider */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--black);
+}
+
+/* GENERIC PROJECT TEMPLATE */
+.project-overview {
+    display: grid;
+    grid-template: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "title title title"
+        "role description description"
+        "tools context context"
+        "timeline links links";
+}
+
+.project-overview .project-title {
+    font-family: "Helvetica Neue", sans-serif;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--black);
+    grid-area: title;
+}
+
+.project-overview .project-description {
+    grid-area: description;
+}
+
+.project-overview .project-context {
+    grid-area: context;
+}
+
+.project-overview .project-role {
+    grid-area: role;
+}
+
+.project-overview .project-tools {
+    grid-area: tools;
+}
+
+.project-overview .project-timeline {
+    grid-area: timeline;
+}
+
+.project-overview .project-links {
+    grid-area: links;
+}
+
+/* SPECIFIC PROJECTS */
+/* MEDSCANNER */
+
+
+/* <------------------------> */
 
 
 /* <-------------------- TABLET ADJUSTMENTS --------------------> */
