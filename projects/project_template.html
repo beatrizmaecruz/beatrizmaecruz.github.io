@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Beatriz Cruz: Project Name</title> <!-- FLAG: Must change to actual project name  -->
+  <title>Beatriz Cruz: Project Name</title> <!-- REPLACE WITH: Must change to actual project name  -->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Coding portfolio for Beatriz Cruz, a software developer based in Auckland, New Zealand." />
-
-  <link rel="stylesheet" href="../styles.css"> <!-- CHANGE TO: <link rel="stylesheet" href="../styles.css"> -->
+  <link rel="stylesheet" href="../styles.css">
+  <!-- REPLACE WITH:
+   <link rel="stylesheet" href="../../styles.css">
+   -->
 </head>
 
 
@@ -15,16 +17,18 @@
 
     <nav id="nav-bar">
         <ul id="navigation">
-          <li class="active"><a href="">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/about.html">About</a></li>
-          <li><a href="../pages/projects.html">Projects</a></li>
+          <li class="active"><a href="../pages/projects.html">Projects</a></li>
           <li><a href="../pages/contact.html">Contact</a></li>
-        <!-- CHANGE TO:
-          <li class="active"><a href="">Home</a></li>
-          <li><a href="../../pages/about.html">About</a></li>
-          <li><a href="../../pages/projects.html">Projects</a></li>
-          <li><a href="../../pages/contact.html">Contact</a></li>
-        -->
+
+          <!-- REPLACE WITH:
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/about.html">About</a></li>
+            <li class="active"><a href="../../pages/projects.html">Projects</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
+          -->
+
         </ul>
     </nav> 
 
@@ -34,23 +38,43 @@
 
         <h1 class="project-title">Project Title</h1>
 
-        <p class="project-description">Brief description.</p>
+        <div class="project-description">
+          <h3>Description</h3>
+          <p>Briefly describe the project result and what it does.</p>
+        </div>
 
-        <p class="project-context">Context of project.</p>
+        <div class="project-context">
+          <h3>Context</h3>
+          <p>Describe the situation behind the need for the project.</p>
+        </div>
 
-        <ul class="project-role">
+        <div class="project-role">
+          <h3>Roles</h3>
+          <ul>
             <li>Role 1</li>
-        </ul>
+            <li>Role 2</li>
+            <li>Role 3</li>
+          </ul>
+        </div>
 
-        <ul class="project-tools">
+        <div class="project-tools">
+          <h3>Tools</h3>
+          <ul>
             <li>Tool 1</li>
-        </ul>
+            <li>Tool 2</li>
+            <li>Tool 3</li>
+          </ul>
+        </div>
 
-        <p class="project-timeline">Month Year - Month Year</p>
+        <div class="project-timeline">
+          <h3>Timeline</h3>
+          <p>Month 20XX - Month 20XX</p>
+        </div>
 
         <div class="project-links">
-            <a>Live Site</a>
-            <a>Github</a>
+          <h3>Links</h3>
+          <a>Live Site</a>
+          <a>Github</a>
         </div>
 
     </section>

@@ -376,6 +376,7 @@ section h2 {
     display: grid;
     grid-template: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
     grid-template-areas:
         "title title title"
         "role description description"
@@ -383,9 +384,17 @@ section h2 {
         "timeline links links";
 }
 
-.project-overview .project-title {
+.project-overview ul {
+    padding-left: 1rem;
+}
+
+.project-overview h1, h3 {
     font-family: "Helvetica Neue", sans-serif;
     padding-bottom: 1rem;
+}
+
+.project-overview .project-title {
+    width: 100%;
     border-bottom: 1px solid var(--black);
     grid-area: title;
 }
@@ -424,7 +433,7 @@ section h2 {
 /* <-------------------- TABLET ADJUSTMENTS --------------------> */
 @media only screen and (max-width: 1023px) {
     .page-content {
-        padding: 2rem 5rem 0;
+        padding: 6rem 5rem 0;
     }
     #home-greeting-grid .grid-item {
         padding: 2rem;
@@ -462,6 +471,18 @@ section h2 {
             "intro"
             "about"
             "learnt"
+    }
+    .project-overview {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            "title title"
+            "description description"
+            "context context"
+            "role tools"
+            "timeline links";
+        place-content: center;
+        gap: 4rem 0.9rem;
     }
 }
 
