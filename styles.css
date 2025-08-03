@@ -1,8 +1,7 @@
 /* ASSETS */
 :root {
-    --powder: #f5f3f2;
-    --near-white: rgba(255, 255, 255, 0.7);
-    --powder-transparent: rgba(244, 239, 239, 0.7);
+    --white: #f7f4f4;
+    --gray: #f2eeee;
 
     --black: #111111;
 }
@@ -20,7 +19,7 @@
 /* UNIVERSAL STYLING */
 
 html {
-    background-color: var(--powder);
+    background-color: var(--white);
 }
 
 * {
@@ -54,11 +53,15 @@ h2 {
 
 .grid-item {
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--gray);
     backdrop-filter: blur(100px);
 
     border-radius: 1.2rem;
     padding: 3.7rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* SPANS STYLING */
@@ -81,12 +84,14 @@ span.extra-bold {
     margin: 0 auto;
     top: 3dvh;
 
-    background: var(--powder-transparent);
+    background: var(--gray);
     backdrop-filter: blur(8px);
     border: 1.2px solid var(--black);
     border-radius: 1.2rem;
 
     z-index: 99;
+
+    box-shadow: 0px 3px 0.8rem rgba(81, 26, 26, 0.227);
 }
 
 #navigation, #navigation * {
@@ -123,16 +128,16 @@ span.extra-bold {
 }
 
 #nav-bar ul li.active a {
-    color: var(--powder);
+    color: var(--white);
 }
 
 @keyframes navChange {
     from {
-        background: var(--powder);
+        background: var(--white);
         color: var(--black);
     } to {
         background: var(--black);
-        color: var(--powder);
+        color: var(--white);
     }
 }
 
@@ -184,6 +189,10 @@ section h2 {
     text-align: left;
 }
 
+#home-greeting-grid > div {
+    background: var(--gray);
+}
+
 /* Self-note: grid-area property also covers for mobile grid placement too. */
 #greet-1 {
     grid-area: intro;
@@ -215,8 +224,6 @@ section h2 {
     font-size: 1rem;
     text-decoration: none;
 
-    background: var(--powder-transparent);
-    backdrop-filter: blur(8px);
     border: 1.2px solid var(--black);
     border-radius: 1.2rem;
 
@@ -225,7 +232,7 @@ section h2 {
 }
 
 #greet-2 a:hover {
-    color: var(--powder);
+    color: var(--white);
     background: var(--black);
 }
 
@@ -241,7 +248,7 @@ section h2 {
 
 #greet-3 #learnt-languages {
     overflow-x: scroll;
-    scrollbar-color: rgba(0, 0, 0, 0.5) var(--near-white);
+    scrollbar-color: rgba(0, 0, 0, 0.5) var(--gray);
     scrollbar-width: thin;
 
     padding: 20px 0;
@@ -266,16 +273,11 @@ section h2 {
 #home-projects-grid .grid-item {
     padding: 0;
     height: fit-content;
-    transition: 320ms ease-in;
 }
 
 #home-projects-grid .grid-item img {
     display: block;
     max-inline-size: 100%;
-}
-
-#home-projects-grid .grid-item:hover {
-    scale: 1.05;
 }
 
 /* HOME CONTACT FORM */
@@ -290,14 +292,17 @@ section h2 {
         "submit submit";
     row-gap: 1.5rem;
 
-    background: var(--near-white);
+    background: var(--gray);
     border-radius: 1.2rem;
     padding: 3.7rem;
 }
 
 .email-form input, .email-form textarea {
     width: 100%;
-    background: var(--powder-transparent);
+
+    padding: 0.6rem;
+
+    background: var(--white);
     border: 1px solid var(--black);
     min-height: 2rem;
     border-radius: 0.5rem;
@@ -330,7 +335,7 @@ section h2 {
     font-size: 1.1rem;
     padding: 0.5rem;
     
-    background: var(--powder-transparent);
+    background: var(--white);
     backdrop-filter: blur(8px);
     border: 1.2px solid var(--black);
     border-radius: 1.5rem;
@@ -339,7 +344,7 @@ section h2 {
 }
 
 .form-submit:hover {
-    color: var(--powder);
+    color: var(--white);
     background: var(--black);
 }
 
@@ -353,12 +358,13 @@ section h2 {
 }
 
 
-/* <-------------------- PROEJCTS PAGE --------------------> */
+/* <-------------------- PROJECTS PAGE --------------------> */
 #projects-grid {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1.2rem;
 }
+
+#projects-grid > 
 
 #projects-grid h3.project-preview-title {
     font-family: "Helvetica Neue";
@@ -375,7 +381,7 @@ section h2 {
 .project-overview {
     display: grid;
     grid-template: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
     gap: 3rem;
     grid-template-areas:
         "title title title"
@@ -423,6 +429,11 @@ section h2 {
     grid-area: links;
 }
 
+.project-overview .project-links a {
+    border: 1px solid var(--black);
+    padding: 0.5rem 3rem;
+}
+
 /* SPECIFIC PROJECTS */
 /* MEDSCANNER */
 
@@ -437,6 +448,18 @@ section h2 {
     }
     #home-greeting-grid .grid-item {
         padding: 2rem;
+    }
+    #home-greeting-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: 
+        "intro"
+        "about"
+        "learnt"
+    }
+    section h2 {
+        margin-left: 0;
     }
 }
 
@@ -459,30 +482,31 @@ section h2 {
         place-content: center;
         row-gap: 10px;
     }
-
     #footer-contacts {
         text-align: center;
     }
-    #home-greeting-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
 
-        grid-template-areas: 
-            "intro"
-            "about"
-            "learnt"
+    /* HOMEPAGE */
+    #home-projects-grid {
+        grid-template-columns: 1fr;
     }
+
+    /* PROJECTS */
     .project-overview {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, auto);
         grid-template-areas:
-            "title title"
-            "description description"
-            "context context"
-            "role tools"
-            "timeline links";
+            "title"
+            "description"
+            "context"
+            "role"
+            "tools"
+            "timeline"
+            "links";
         place-content: center;
         gap: 4rem 0.9rem;
     }
+
+
 }
 
