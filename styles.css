@@ -61,6 +61,10 @@ h2 {
     padding: 3.7rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* SPANS STYLING */
 span.italic {
     font-style: italic;
@@ -110,7 +114,6 @@ span.extra-bold {
 #navigation a {
     display: block;
 
-    text-decoration: none;
     text-align: center;
 
     padding-top: 0.4rem;  /* Roughly vertically aligns the text to the center */
@@ -149,10 +152,6 @@ span.extra-bold {
 
 #footer li {
     list-style: none;
-}
-
-#footer a {
-    text-decoration: none;
 }
 
 #footer-contacts {
@@ -213,7 +212,6 @@ section h2 {
 
     text-align: center;
     font-size: 1rem;
-    text-decoration: none;
 
     background: var(--powder-transparent);
     backdrop-filter: blur(8px);
@@ -259,24 +257,22 @@ section h2 {
 
 #home-projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
     gap: 1.5rem;
 }
 
 #home-projects-grid .grid-item {
     padding: 0;
-    height: fit-content;
-    transition: 320ms ease-in;
 }
 
 #home-projects-grid .grid-item img {
     display: block;
     max-inline-size: 100%;
+
 }
 
-#home-projects-grid .grid-item:hover {
-    scale: 1.05;
-}
+/* PROJECT PREVIEWS SPECIFIC */
+
 
 /* HOME CONTACT FORM */
 .email-form {
@@ -353,10 +349,9 @@ section h2 {
 }
 
 
-/* <-------------------- PROEJCTS PAGE --------------------> */
+/* <-------------------- PROJECTS PAGE --------------------> */
 #projects-grid {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1.2rem;
 }
 
@@ -375,8 +370,8 @@ section h2 {
 .project-overview {
     display: grid;
     grid-template: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 3rem;
+    grid-template-rows: repeat(4, auto);
+    gap: 3.2rem;
     grid-template-areas:
         "title title title"
         "role description description"
@@ -397,6 +392,10 @@ section h2 {
     width: 100%;
     border-bottom: 1px solid var(--black);
     grid-area: title;
+}
+
+.project-description a, .xproject-context a {
+    text-decoration: underline;
 }
 
 .project-overview .project-description {
@@ -421,6 +420,17 @@ section h2 {
 
 .project-overview .project-links {
     grid-area: links;
+    height: fit-content;
+}
+
+.project-overview .project-links h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-overview .project-links a {
+    border: 1px solid var(--black);
+    padding: 0.5rem 3rem;
+    text-align: center;
 }
 
 /* SPECIFIC PROJECTS */
@@ -437,6 +447,18 @@ section h2 {
     }
     #home-greeting-grid .grid-item {
         padding: 2rem;
+    }
+    #home-greeting-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+
+        grid-template-areas: 
+            "intro"
+            "about"
+            "learnt"
+    }
+    section h2 {
+        margin-left: 0;
     }
 }
 
@@ -463,15 +485,12 @@ section h2 {
     #footer-contacts {
         text-align: center;
     }
-    #home-greeting-grid {
+
+    #home-projects-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
-
-        grid-template-areas: 
-            "intro"
-            "about"
-            "learnt"
     }
+
     .project-overview {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, auto);
@@ -484,5 +503,11 @@ section h2 {
         place-content: center;
         gap: 4rem 0.9rem;
     }
+    .project-overview .project-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
 }
 
