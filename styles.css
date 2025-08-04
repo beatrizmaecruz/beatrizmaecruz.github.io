@@ -375,6 +375,9 @@ section h2 {
     gap: 1rem;
 }
 
+#about-grid .grid-item {
+    padding: auto 0;
+}
 
 
 /* <-------------------- PROJECTS PAGE --------------------> */
@@ -382,8 +385,6 @@ section h2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
-
-#projects-grid > 
 
 #projects-grid h3.project-preview-title {
     font-family: "Helvetica Neue";
@@ -394,6 +395,12 @@ section h2 {
     /* Divider */
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--black);
+}
+
+#projects-grid .grid-item a {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: underline;
 }
 
 /* GENERIC PROJECT TEMPLATE */
@@ -451,7 +458,14 @@ section h2 {
 .project-overview .project-links a {
     border: 1px solid var(--black);
     padding: 0.5rem 3rem;
+    transition-duration: 600ms;
 }
+
+.project-overview .project-links a:hover {
+    color: var(--white);
+    background: var(--black);
+}
+
 
 /* SPECIFIC PROJECTS */
 /* MEDSCANNER */
