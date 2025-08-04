@@ -194,13 +194,6 @@ section h2 {
     background: var(--gray);
 }
 
-/* For more narrow desktops */
-@media only screen and (max-width: 1232px) {
-    #home-greeting-grid > .grid-item {
-        padding: 1.7rem;
-    }
-}
-
 /* Self-note: grid-area property also covers for mobile grid placement too. */
 #greet-1 {
     grid-area: intro;
@@ -325,8 +318,7 @@ section h2 {
 
 .email-form-name {
     grid-area: input-name;
-
-    padding-left: 1rem;
+    margin-left: 1rem;
 }
 
 .email-form-subject {
@@ -369,16 +361,39 @@ section h2 {
 /* <-------------------- ABOUT ME PAGE --------------------> */
 #about-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-        "";
+        "born space"
+        "art space"
+        "art ironic";
     gap: 1rem;
 }
 
 #about-grid .grid-item {
-    padding: auto 0;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
 }
 
+#about-grid .grid-item > ul li{
+    margin-left: 1rem;
+}
+
+#about-born {
+    grid-area: born;
+}
+
+#about-space {
+    grid-area: space;
+}
+
+#about-art {
+    grid-area: art;
+}
+
+#about-ironic {
+    grid-area: ironic;
+}
 
 /* <-------------------- PROJECTS PAGE --------------------> */
 #projects-grid {
@@ -473,12 +488,21 @@ section h2 {
 
 /* <------------------------> */
 
+/* <-------------------- NARROW DESKTOP ADJUSTMENTS --------------------> */
+/* Don't actually know if this is a real thing... but it felt right. */
+@media only screen and (min-width: 1024px) and (max-width: 1232px) {
+    #home-greeting-grid > .grid-item {
+        padding: 1.7rem;
+    }
+}
 
 /* <-------------------- TABLET ADJUSTMENTS --------------------> */
 @media only screen and (max-width: 1023px) {
     .page-content {
         padding: 6rem 5rem 0;
     }
+
+    /* HOMEPAGE */
     #home-greeting-grid .grid-item {
         padding: 2rem;
     }
@@ -492,10 +516,16 @@ section h2 {
         "learnt"
     }
     #home-greeting-grid > .grid-item {
-        padding: 1.3rem;
+        padding: 1.6rem;
     }
     section h2 {
         margin-left: 0;
+    }
+
+
+    /* ABOUT PAGE */
+    #about-grid > .grid-item {
+        padding: 1.5rem;
     }
 }
 
@@ -525,6 +555,37 @@ section h2 {
     /* HOMEPAGE */
     #home-projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    #home-contact-me form {
+        padding: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+            "input-name"
+            "input-email"
+            "input-subject"
+            "input-message"
+            "submit";
+        ;
+    }
+    .email-form-name {
+        margin-left: 0;
+    }
+
+    /* ABOUT */
+    #about-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "born"
+            "space"
+            "art"
+            "ironic"
+        ;
+    }
+    #about-grid > .grid-item {
+        padding: 1.5rem;
     }
 
     /* PROJECTS */
