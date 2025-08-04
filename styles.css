@@ -172,6 +172,7 @@ section {
 
 section h2 {
     margin: 0 0 2rem 3.7rem;
+    line-height: 2rem;
 }
 
 /* GREETING GRID */
@@ -191,6 +192,13 @@ section h2 {
 
 #home-greeting-grid > div {
     background: var(--gray);
+}
+
+/* For more narrow desktops */
+@media only screen and (max-width: 1232px) {
+    #home-greeting-grid > .grid-item {
+        padding: 1.7rem;
+    }
 }
 
 /* Self-note: grid-area property also covers for mobile grid placement too. */
@@ -468,6 +476,9 @@ section h2 {
         "intro"
         "about"
         "learnt"
+    }
+    #home-greeting-grid > .grid-item {
+        padding: 1.3rem;
     }
     section h2 {
         margin-left: 0;
