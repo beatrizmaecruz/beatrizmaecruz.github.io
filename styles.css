@@ -2,9 +2,14 @@
 :root {
     --white: #f7f4f4;
     --gray: #f2eeee;
-
     --black: #111111;
 }
+
+/* :root {
+    --white: #17171a;
+    --gray: #131315;
+    --black: #f7f4f4;
+} */
 
 @font-face {
     font-family: "Black Mango";
@@ -395,6 +400,22 @@ section h2 {
     grid-area: ironic;
 }
 
+/* <-------------------- CONTACT PAGE --------------------> */
+#contact-page section > p:not(#phone-warning) {
+    margin: 0 0 2rem 3.7rem;
+}
+
+#phone-warning {
+    padding: 2rem;
+    border: 1px solid black;
+    /* margin-right: 3.7rem; */
+}
+
+.bug-message {
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* <-------------------- PROJECTS PAGE --------------------> */
 #projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -521,7 +542,10 @@ section h2 {
     section h2 {
         margin-left: 0;
     }
-
+    
+    #contact-page section > p:not(#phone-warning) { /* Interesting note on this but we NEED to include :not(#phone-warning) or else the other selector for desktop takes precedence due to a higher specifity. Woahhh */
+    margin: 0 0 2rem 0;
+    }
 
     /* ABOUT PAGE */
     #about-grid > .grid-item {
@@ -557,7 +581,7 @@ section h2 {
         grid-template-columns: 1fr;
     }
 
-    #home-contact-me form {
+    .email-form {
         padding: 1.5rem;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
@@ -606,4 +630,3 @@ section h2 {
 
 
 }
-

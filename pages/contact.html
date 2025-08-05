@@ -21,14 +21,95 @@
         </ul>
     </nav> 
 
-  <main class="page-content">
+  <main id="contact-page" class="page-content">
 
-      <h1>Currently under construction...</h1>
-      <p>Check back soon. ;)</p>
-      
+    <section id="contact-phone">
+      <h2>Want to chat?</h2>
+      <p>Text or call me on: <a href="tel:0273858738">0273858738</a></p>
+      <p id="phone-warning">Please be wary I am still in university and may decline your call due to being in class.</p>
+    </section>
+    
+    <section id="contact-email-form">
+      <h2>Prefer an email?</h2>
+      <p>I usually respond within 12 - 48 hours!</p>
+      <!-- <p>Hint: This sends off to beatrizmaecruz@proton.me.</p> -->
+
+
+      <!-- Thank you to https://web3forms.com for allowing this form to exist and fully function! :D -->
+      <form class="email-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="3d4057e3-a3b6-4e58-bf0c-fc5640090b7c"/>
+        
+
+          <!-- HIDDEN DATA -->
+          <!-- Optional: From Name you want to see in the email -->
+          <input type="hidden" name="from_name" value="Software Portfolio Message"/>
+          <!-- Optional: But Recommended: To Prevent SPAM Submission. 
+              Make sure its hidden by default -->
+          <input type="hidden" name="botcheck" id="" style="display: none;"/>
+
+
+          <!-- VISIBLE FORM DATA -->
+           <div class="email-form-sender-email">
+            <label for="sender email">Email</label>
+            <input type="email" name="sender email" required/>
+           </div>
+          
+           
+          <div class="email-form-name">
+            <label for="sender name">Name</label>
+            <input type="text" name="sender name" required/>
+          </div>
+
+          <div class="email-form-subject">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" />
+          </div>
+
+          <div class="email-form-message">
+            <label for="message">Message</label>
+            <textarea name="message" cols="45" rows="10" required></textarea>
+          </div>
+
+
+          <input type="hidden" name="redirect" value="https://beatrizmaecruz.github.io/pages/thank_you.html">
+          <button class="form-submit" type="submit">Submit Form</button>
+
+      </form>
+    </section>
+
+    <p class="bug-message"><span class="italic">Psst... Have you noticed a responsivity or issue with my portfolio? Please let me know!</span></p>
+
   </main>
 
-    <script src="../main.js"></script>
+  <footer id="footer">
+
+    <div id="footer-navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div id="footer-contacts">
+      <ul>
+        <li><br> </li> 
+        <li>beatrizmaecruz@proton.me</li>
+        <li>+64 027 385 8738</li>
+        <li>Central Auckland, New Zealand</li>
+      </ul>
+    </div>
+
+    <div id="footer-copyright">
+      <p><br><br><br>© Beatriz Cruz 2024 - Present</p>
+    </div>
+
+    <script src="main.js"></script>
+  </footer>
+
+  <script src="../main.js"></script>
 </body>
 
 </html>
