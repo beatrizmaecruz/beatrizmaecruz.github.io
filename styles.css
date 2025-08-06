@@ -257,15 +257,22 @@ section h2 {
     scrollbar-color: rgba(0, 0, 0, 0.5) var(--gray);
     scrollbar-width: thin;
 
-    padding: 20px 0;
+    padding: 50px 30px;
     /* background: white; */
 
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
 #greet-3 #learnt-languages img {
     height: max(120px);
+
+    transition: 500ms;
+}
+
+#greet-3 #learnt-languages img:hover {
+    scale: 1.1;
+    transform: translateY(-10px);
 }
 
 /* PROJECT PREVIEWS */
