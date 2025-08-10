@@ -1,0 +1,17 @@
+Thank you to the various online resources that have these handy images that helped make my portfolio!
+
+Thank you to www.wikipedia.org for:
+- css3.png (Retrieved on August 6, 2025 from https://en.m.wikipedia.org/wiki/File:CSS3_logo_and_wordmark.svg)
+- html5.png (Retrieved on August 6, 2025 from https://en.m.wikipedia.org/wiki/File:HTML5_logo_and_wordmark.svg)
+- java.png (Retrieved on August 6, 2025 from https://en.wikipedia.org/wiki/Java_%28programming_language%29#/media/File:Java_programming_language_logo.svg)
+
+Thank you to www.pngwing.com for:
+- react.png (Retrieved on July 6, 2025 from https://www.pngwing.com/en/free-png-aglpc)
+
+Thank you to icon-icons.com for:
+- python.png (Retrieved on July 6, 2025 from https://icon-icons.com/icon/python-vertical-logo/168039)
+
+Thank you to www.commons.wikimedia.org for:
+- javascript.png (Retrieved on August 6, 2025 from https://commons.wikimedia.org/wiki/File:JavaScript-logo.png)
+    Attribution: Christopher Williams, Public domain, via Wikimedia Commons
+- csharp.png (Retrieved on August 6, 2025 from https://commons.wikimedia.org/wiki/File:Logo_C_sharp.svg)

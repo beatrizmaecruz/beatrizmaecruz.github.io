@@ -263,8 +263,8 @@ section h2 {
     justify-content: center;
 }
 
-#greet-3 #learnt-languages {
-    overflow-x: scroll;
+#learnt-languages {
+    overflow: scroll;
     scrollbar-color: rgba(0, 0, 0, 0.5) var(--gray);
     scrollbar-width: thin;
 
@@ -275,15 +275,32 @@ section h2 {
     gap: 50px;
 }
 
-#greet-3 #learnt-languages img {
+#learnt-languages img {
     height: max(120px);
 
     transition: 300ms;
 }
 
-#greet-3 #learnt-languages img:hover {
+#learnt-languages img:hover {
     scale: 1.1;
     transform: translateY(-10px);
+}
+
+#greet-3 .hover-message {
+    margin: -30% 0 0 5%;
+
+    width: 90%;
+    padding: 0.5rem 1rem;
+
+    border-radius: 3rem;
+    border: none;
+
+    background: var(--white);
+    opacity: 95%;
+}
+
+#greet-3 .hover-message p {
+    text-align: center;
 }
 
 /* PROJECT PREVIEWS */
@@ -482,7 +499,7 @@ section h2 {
 
 #projects-grid .grid-item:hover {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-2gipx);
 }
 
 #projects-grid .grid-item a {
@@ -687,4 +704,24 @@ section h2 {
     }
 
 
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOutOpacity {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
 }
