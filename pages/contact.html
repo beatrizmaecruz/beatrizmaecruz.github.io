@@ -25,16 +25,14 @@
 
     <section id="contact-phone">
       <h2>Want to chat?</h2>
-      <p>Text or call me on: <a href="tel:0273858738">0273858738</a></p>
+      <p><a href="tel:0273858738">Text or call me on: 0273858738</a>.</p>
       <p id="phone-warning">Please be wary I am still in university and may decline your call due to being in class.</p>
     </section>
     
     <section id="contact-email-form">
       <h2>Prefer an email?</h2>
-      <p>I usually respond within 12 - 48 hours!</p>
-      <!-- <p>Hint: This sends off to beatrizmaecruz@proton.me.</p> -->
-
-
+      <p>Use this form or <a href="mailto:beatrizmaecruz@proton.me">email me at beatrizmaecruz@proton.me</a>.</p>
+      <!-- <p>This sends off to beatrizmaecruz@proton.me.</p> -->
       <!-- Thank you to https://web3forms.com for allowing this form to exist and fully function! :D -->
       <form class="email-form" action="https://api.web3forms.com/submit" method="POST">
 
@@ -51,30 +49,29 @@
 
           <!-- VISIBLE FORM DATA -->
            <div class="email-form-sender-email">
-            <label for="sender email">Email</label>
-            <input type="email" name="sender email" required/>
+            <label for="form-email-contact">Email</label>
+            <input type="email" id="form-email-contact" name="email" required/>
            </div>
           
            
           <div class="email-form-name">
-            <label for="sender name">Name</label>
-            <input type="text" name="sender name" required/>
+            <label for="form-name-contact">Name</label>
+            <input type="text" id ="form-name-contact" name="name" required/>
           </div>
 
           <div class="email-form-subject">
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" />
+            <label for="form-subject-contact">Subject</label>
+            <input type="text" id="form-subject-contact" name="subject" />
           </div>
 
           <div class="email-form-message">
-            <label for="message">Message</label>
-            <textarea name="message" cols="45" rows="10" required></textarea>
+            <label for="form-message-contact">Message</label>
+            <textarea name="message" id="form-message-contact" cols="30" rows="10" required></textarea>
           </div>
 
 
           <input type="hidden" name="redirect" value="https://beatrizmaecruz.github.io/pages/thank_you.html">
           <button class="form-submit" type="submit">Submit Form</button>
-
       </form>
     </section>
 

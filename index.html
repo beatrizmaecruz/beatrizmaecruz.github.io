@@ -77,9 +77,7 @@
 
     <section id="home-contact-me">
       <h2>Psst, wanna get in touch?</h2>
-      <!-- <p>Hint: This sends off to beatrizmaecruz@proton.me.</p> -->
-
-
+      <!-- <p>This sends off to beatrizmaecruz@proton.me.</p> -->
       <!-- Thank you to https://web3forms.com for allowing this form to exist and fully function! :D -->
       <form class="email-form" action="https://api.web3forms.com/submit" method="POST">
 
@@ -96,30 +94,29 @@
 
           <!-- VISIBLE FORM DATA -->
            <div class="email-form-sender-email">
-            <label for="sender email">Email</label>
-            <input type="email" name="sender email" required/>
+            <label for="form-email-home">Email</label>
+            <input type="email" id="form-email-home" name="email" required/>
            </div>
           
            
           <div class="email-form-name">
-            <label for="sender name">Name</label>
-            <input type="text" name="sender name" required/>
+            <label for="form-name-home">Name</label>
+            <input type="text" id ="form-name-home" name="name" required/>
           </div>
 
           <div class="email-form-subject">
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" />
+            <label for="form-subject-home">Subject</label>
+            <input type="text" id="form-subject-home" name="subject" />
           </div>
 
           <div class="email-form-message">
-            <label for="message">Message</label>
-            <textarea name="message" cols="30" rows="10" required></textarea>
+            <label for="form-message-home">Message</label>
+            <textarea name="message" id="form-message-home" cols="30" rows="10" required></textarea>
           </div>
 
 
           <input type="hidden" name="redirect" value="https://beatrizmaecruz.github.io/pages/thank_you.html">
           <button class="form-submit" type="submit">Submit Form</button>
-
       </form>
 
     </section>
