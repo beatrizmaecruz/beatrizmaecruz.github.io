@@ -461,16 +461,6 @@ section h2 {
 }
 
 /* <-------------------- CONTACT PAGE --------------------> */
-#contact-page section > p:not(#phone-warning) {
-    margin: 0 0 2rem 3.7rem;
-}
-
-#phone-warning {
-    padding: 2rem;
-    border: 1px solid black;
-    /* margin-right: 3.7rem; */
-}
-
 .bug-message {
     margin-top: 2rem;
     text-align: center;
@@ -610,10 +600,6 @@ section h2 {
     }
     section h2 {
         margin-left: 0;
-    }
-    
-    #contact-page section > p:not(#phone-warning) { /* Interesting note on this but we NEED to include :not(#phone-warning) or else the other selector for desktop takes precedence due to a higher specifity. Woahhh */
-    margin: 0 0 2rem 0;
     }
 
     /* ABOUT PAGE */
