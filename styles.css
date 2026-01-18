@@ -255,23 +255,6 @@ section h2 {
     transform: translateY(-10px);
 }
 
-#greet-3 .hover-message {
-    margin: -30% 0 0 5%;
-
-    width: 90%;
-    padding: 0.5rem 1rem;
-
-    border-radius: 3rem;
-    border: none;
-
-    background: var(--white);
-    opacity: 95%;
-}
-
-#greet-3 .hover-message p {
-    text-align: center;
-}
-
 /* PROJECT PREVIEWS */
 
 #home-projects-grid {
