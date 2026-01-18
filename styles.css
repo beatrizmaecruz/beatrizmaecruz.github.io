@@ -187,13 +187,11 @@ section h2 {
 
 /* GREETING GRID */
 #home-greeting-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
-    gap: 1.5rem;
+    row-gap: 1.5rem;
 
     grid-template-areas: 
-        "intro intro intro"
-        "about learnt learnt";
+        "intro"
+        "learnt";
 }
 
 #home-greeting-grid * {
@@ -206,7 +204,7 @@ section h2 {
     transition: 170ms ease-out;
 }
 
-#home-greeting-grid > div.grid-item:hover, #home-contact-me form:hover {
+#home-contact-me form:hover {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -226,34 +224,6 @@ section h2 {
 }
 
 #greet-2 {
-    grid-area: about;
-    padding-top: 25%;
-
-    font-size: 1.2rem;
-}
-
-#greet-2 a {
-    display: block;
-    margin-top: 1.7rem;
-    padding: 0.5rem 1rem;
-
-    text-align: center;
-    font-size: 1rem;
-    text-decoration: none;
-
-    border: 1.2px solid var(--black);
-    border-radius: 1.2rem;
-
-
-    transition-duration: 600ms;
-}
-
-#greet-2 a:hover {
-    color: var(--white);
-    background: var(--black);
-}
-
-#greet-3 {
     grid-area: learnt;
     font-size: 1.2rem;
 
