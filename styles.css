@@ -234,19 +234,18 @@ section h2 {
 }
 
 #learnt-languages {
-    overflow: scroll;
-    scrollbar-color: rgba(0, 0, 0, 0.5) var(--gray);
-    scrollbar-width: thin;
-
     padding: 50px 30px;
-    /* background: white; */
 
     display: flex;
-    gap: 50px;
+
+    place-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
 }
 
 #learnt-languages img {
-    height: max(120px);
+    height: max(150px);
 
     transition: 300ms;
 }
